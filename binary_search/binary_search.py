@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
 def binary_search(v, x, left, right):
-    """Found x in a ascendent sorted list"""
+    """Found x in a sorted in ascending order"""
     if left <= right:
         middle = int((left + right) / 2)
         if x < v[middle]:
