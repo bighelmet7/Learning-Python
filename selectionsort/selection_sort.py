@@ -3,6 +3,7 @@
 # -*- coding: utf-8 -*-
 
 def selection_sort(v):
+    """TIME COMPLEXITY Theta(n^2)"""
     for i in range(len(v)):
         mini = min(v[i:])
         min_index = v[i:].index(mini)
