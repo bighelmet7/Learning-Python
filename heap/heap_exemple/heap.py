@@ -9,7 +9,7 @@ class Heap:
 
     def _min_child(self, left_child, right_child):
         """
-        Returns the min_child in the queue
+        Returns the min_child
         """
         if self.queue[left_child] > self.queue[right_child]:
             return right_child
