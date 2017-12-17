@@ -3,6 +3,10 @@ Script que realiza N test para M diferentes seeds, sobre 4 jugadores,
 puestos de manera aleatoria.
 
 El resultado es dado en un JSON.
+
+Para ejecutar el script solo se necesita Python 3.x, para soporte con
+python 2.x contactad conmigo, para ello, o bien si necesitais resultados
+mas especificos.
 """
 #!/usr/bin/env python
 import subprocess
