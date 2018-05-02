@@ -11,6 +11,9 @@ from users.models import User
 
 
 class UserFilter(filters.FilterSet):
+    """
+    Filtro para los usuarios
+    """
 
     name = filters.CharFilter(name='name', lookup_expr='iexact')
 
@@ -22,6 +25,9 @@ class UserFilter(filters.FilterSet):
 
 
 class UserDetail(serializers.ModelSerializer):
+    """
+    Serializer con todos los detalles que queremos mostrar del usuario
+    """
     name = serializers.CharField(max_length=100)
 
     class Meta:
@@ -32,6 +38,9 @@ class UserDetail(serializers.ModelSerializer):
 
 
 class UserList(generics.ListAPIView):
+    """
+    Vista que muestra un listado de Usuarios utilizando el UserDetail como serializer 
+    """
     name = 'user-list'
     queryset = Users.objects.all()
     serializer_class = UserDetail
