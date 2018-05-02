@@ -23,5 +23,9 @@ class UserList(generics.ListAPIView):
     serializer_class = UserDetail
 
     def get_queryset(self):
-        name = self.kwargs.get('name')
+        name = self.request.query_params.get('name')
+
+        if not name:
+            return User.objects.none()
+
         return User.objects.filter(name=name)
