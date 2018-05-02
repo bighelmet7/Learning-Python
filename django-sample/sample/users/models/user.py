@@ -9,3 +9,11 @@ class User(models.Model):
 
     def __unicode__(self):
         return self.name
+
+    def save(self, *args, **kwargs):
+        # Guardamos el nombre del usuario siempre en minusculas.
+
+        self.name = self.name.lower()
+        self.full_clean()
+
+        return super(User, self).save(*args, **kwargs)
