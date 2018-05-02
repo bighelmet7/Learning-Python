@@ -39,7 +39,7 @@ class UserDetail(serializers.ModelSerializer):
 
 class UserList(generics.ListAPIView):
     """
-    Vista que muestra un listado de Usuarios utilizando el UserDetail como serializer 
+    Vista que muestra un listado de Usuarios utilizando el UserDetail como serializer
     """
     name = 'user-list'
     queryset = Users.objects.all()
